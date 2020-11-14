@@ -1,0 +1,10 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-MD2>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-m-d2.md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-MD5>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-m-d5.md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-SHA1>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-s-h-a1.md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-SHA256>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-s-h-a256.md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-SHA384>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-s-h-a384.md
+$dokka.location:dev.jhseo.hasher/HasherMethod.Companion/<get-SHA512>/#/PointingToDeclaration/dev.jhseo.hasher/-hasher-method/-companion/get-s-h-a512.md
+dev.jhseo.hasher
+
