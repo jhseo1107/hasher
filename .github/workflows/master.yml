@@ -52,9 +52,6 @@ jobs:
         run: ./gradlew dokkaGfm
       - name: Push generated gfm docs to github
         run:  |
-          git config --global user.name "Dokka pusher bot"
-          git config --global user.email "seojanghyeob@gmail.com"
-
           git add docs
           git commit -m "Update docs"
           git push
