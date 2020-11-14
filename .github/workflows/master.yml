@@ -56,5 +56,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add docs
-          git commit -m "${{ github.event.head_commit.message }} : Update docs for this"
+          git commit -m "${{ github.event.head_commit.message }} : Update docs"
           git push
