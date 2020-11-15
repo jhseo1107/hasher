@@ -31,22 +31,11 @@ class HasherMethod (internal val algorithm: (String, Charset) -> String) {
             return {content: String, charset: Charset -> DatatypeConverter.printHexBinary(MessageDigest.getInstance(methodName).digest(content.toByteArray(charset)))}
         }
 
-        @JvmStatic
         val MD2 = HasherMethod(defaultJvmHashMethod("MD2"))
-
-        @JvmStatic
         val MD5 = HasherMethod(defaultJvmHashMethod("MD5"))
-
-        @JvmStatic
         val SHA1 = HasherMethod(defaultJvmHashMethod("SHA-1"))
-
-        @JvmStatic
         val SHA256 = HasherMethod(defaultJvmHashMethod("SHA-256"))
-
-        @JvmStatic
         val SHA384 = HasherMethod(defaultJvmHashMethod("SHA-384"))
-
-        @JvmStatic
         val SHA512 = HasherMethod(defaultJvmHashMethod("SHA-512"))
     }
 }
