@@ -20,7 +20,7 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-tasks.dokkaGfm.configure {
+tasks.dokkaHtml.configure {
     outputDirectory.set(rootDir.resolve("docs"))
     moduleName.set("${version}")
 }
@@ -31,5 +31,5 @@ dependencies {
     testImplementation("io.kotest:kotest-assertions-core:${kotestVersion}") // for kotest core jvm assertions
     testImplementation("io.kotest:kotest-property:${kotestVersion}") // for kotest property test
 
-    dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.10.2")
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.10.2")
 }
