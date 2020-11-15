@@ -50,7 +50,7 @@ jobs:
         run: chmod +x gradlew
       - name: Generate html docs with dokka
         run: ./gradlew dokkaHtml
-      - name: Push generated gfm docs to github
+      - name: Push generated html docs to github
         run:  |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
