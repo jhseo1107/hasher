@@ -22,7 +22,9 @@ tasks.withType<KotlinCompile> {
 
 tasks.dokkaHtml.configure {
     outputDirectory.set(rootDir.resolve("docs"))
-    moduleName.set("${version}")
+
+    val versionList = (version as String).split(".")
+    moduleName.set(versionList[0]+"."+versionList[1]) // Set to major version name
 }
 
 val kotestVersion = "4.3.1"
