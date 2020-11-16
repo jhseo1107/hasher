@@ -8,7 +8,7 @@ plugins {
     id("com.jfrog.bintray") version "1.8.5"
 }
 group = "dev.jhseo"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -30,6 +30,11 @@ tasks.dokkaHtml.configure {
     moduleName.set(versionList[0]+"."+versionList[1]) // Set to major version name
 }
 
+val sourcesJar = task<Jar>("sourcesJar") {
+    classifier = "sources"
+    from("src/main/kotlin")
+}
+
 publishing {
     publications {
         register("BintrayRelease", MavenPublication::class) {
@@ -38,6 +43,8 @@ publishing {
             artifactId = "hasher"
             groupId = project.group as String
             version = project.version as String
+
+            artifact(sourcesJar)
         }
     }
 }
