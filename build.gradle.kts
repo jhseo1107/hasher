@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Date
 
 plugins {
+    `maven-publish`
     kotlin("jvm") version "1.4.10"
     id("org.jetbrains.dokka") version "1.4.10.2"
     id("com.jfrog.bintray") version "1.8.5"
@@ -27,6 +28,18 @@ tasks.dokkaHtml.configure {
 
     val versionList = (version as String).split(".")
     moduleName.set(versionList[0]+"."+versionList[1]) // Set to major version name
+}
+
+publishing {
+    publications {
+        register("BintrayRelease", MavenPublication::class) {
+            from(components["kotlin"])
+
+            artifactId = "hasher"
+            groupId = project.group as String
+            version = project.version as String
+        }
+    }
 }
 
 bintray {
