@@ -1,8 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.util.Date
 
 plugins {
     kotlin("jvm") version "1.4.10"
     id("org.jetbrains.dokka") version "1.4.10.2"
+    id("com.jfrog.bintray") version "1.8.5"
 }
 group = "dev.jhseo"
 version = "1.0.0"
@@ -25,6 +27,23 @@ tasks.dokkaHtml.configure {
 
     val versionList = (version as String).split(".")
     moduleName.set(versionList[0]+"."+versionList[1]) // Set to major version name
+}
+
+bintray {
+    user = "jhseo1107"
+    key = System.getenv("BINTRAY_KEY")
+    setPublications("BintrayRelease")
+    with(pkg) {
+        repo = "maven"
+        name = "hasher"
+        vcsUrl = "https://github.com/jhseo1107/hasher.git"
+        issueTrackerUrl = "https://github.com/jhseo1107/hasher/issues"
+        publicDownloadNumbers = true
+        publish = true
+        setLicenses("MIT")
+        version.name = project.version as String
+        version.released = Date().toString()
+    }
 }
 
 val kotestVersion = "4.3.1"
