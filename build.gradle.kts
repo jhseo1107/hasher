@@ -26,7 +26,7 @@ tasks.withType<KotlinCompile> {
 tasks.dokkaHtml.configure {
     outputDirectory.set(rootDir.resolve("docs"))
 
-    moduleName.set("Hasher")
+    moduleName.set("hasher")
 }
 
 val sourcesJar = task<Jar>("sourcesJar") {
