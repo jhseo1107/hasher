@@ -26,8 +26,7 @@ tasks.withType<KotlinCompile> {
 tasks.dokkaHtml.configure {
     outputDirectory.set(rootDir.resolve("docs"))
 
-    val versionList = (version as String).split(".")
-    moduleName.set(versionList[0]+"."+versionList[1]) // Set to major version name
+    moduleName.set("Hasher")
 }
 
 val sourcesJar = task<Jar>("sourcesJar") {
