@@ -38,4 +38,8 @@ class HasherMethod (internal val algorithm: (String, Charset) -> String) {
         val SHA384 = HasherMethod(defaultJvmHashMethod("SHA-384"))
         val SHA512 = HasherMethod(defaultJvmHashMethod("SHA-512"))
     }
+
+    infix fun hash (text: String) : String {
+        return ""
+    }
 }

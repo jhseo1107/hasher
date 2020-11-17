@@ -8,7 +8,7 @@ plugins {
     id("com.jfrog.bintray") version "1.8.5"
 }
 group = "dev.jhseo"
-version = "1.1.0"
+version = "1.2.0"
 
 repositories {
     mavenCentral()
